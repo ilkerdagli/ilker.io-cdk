@@ -1,0 +1,295 @@
+digraph "Diagram" {
+  splines = "ortho";
+  pad = "1.0";
+  nodesep = "0.60";
+  ranksep = "0.75";
+  fontname = "Sans-Serif";
+  fontsize = "15";
+  dpi = "200";
+  rankdir = "BT";
+  compound = "true";
+  fontcolor = "#222222";
+  edge [
+    color = "#D5871488",
+    penwidth = 2,
+    arrowhead = "dot",
+    arrowtail = "dot",
+  ];
+  node [
+    shape = "box",
+    style = "rounded",
+    fixedsize = true,
+    width = 1.7,
+    height = 1.7,
+    labelloc = "c",
+    imagescale = true,
+    fontname = "Sans-Serif",
+    fontsize = 8,
+    margin = 8,
+  ];
+  subgraph "App" {
+    subgraph "cluster-SubGraph.App" {
+      graph [
+        label = "App",
+        labelloc = "b",
+        labeljust = "l",
+        margin = "10",
+        fontsize = "16",
+        penwidth = "2",
+        pencolor = "#888888",
+        style = "filled,rounded",
+        fillcolor = "#f3f3f3",
+      ];
+      subgraph "cluster-SubGraph.IlkerIoCertificateStack" {
+        graph [
+          label = "IlkerIoCertificateStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "IlkerIoCertificateStack/ilker.io-Cert" [
+          label = " ilker.io-Cert",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Security-Identity-Compliance/64/Arch_AWS-Certificate-Manager_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "IlkerIoCertificateStack/ExportsWritereuwest313DEC262" [
+          label = "\nExportsWritereuwest31",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+      }
+      subgraph "cluster-SubGraph.IlkerIoLamdaEdgeStack" {
+        graph [
+          label = "IlkerIoLamdaEdgeStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "IlkerIoLamdaEdgeStack/ExportsWritereuwest313DEC262" [
+          label = "\nExportsWritereuwest31",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+        "IlkerIoLamdaEdgeStack/DefaultIndexFunction/Fn" [
+          label = " Fn",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Compute/64/Arch_AWS-Lambda_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+      }
+      subgraph "cluster-SubGraph.IlkerIoStack" {
+        graph [
+          label = "IlkerIoStack",
+          labelloc = "b",
+          labeljust = "l",
+          margin = "10",
+          fontsize = "16",
+          penwidth = "2",
+          pencolor = "#888888",
+          style = "filled,rounded",
+          fillcolor = "#e4e4e4",
+        ];
+        "IlkerIoStack/ilker.io-CodeCommitRepository" [
+          label = " ilker.io\nCodeCommitRepository",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_AWS-CodeCommit_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.682,
+        ];
+        "IlkerIoStack/ilker.io-WebSiteBucket" [
+          label = " ilker.io\nWebSiteBucket",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Storage/64/Arch_Amazon-S3-Standard_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.4819999999999998,
+        ];
+        "IlkerIoStack/OAI" [
+          label = " OAI",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Resource/Res_Security-Identity-and-Compliance/Res_48_Dark/Res_AWS-Identity-Access-Management_Permissions_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "IlkerIoStack/ilker.io-CFDist" [
+          label = " ilker.io-CFDist",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Networking-Content/64/Arch_Amazon-CloudFront_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 2,
+          height = 2.266,
+        ];
+        "IlkerIoStack/CodeBuildProject" [
+          label = " CodeBuildProject",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "IlkerIoStack/InvalidateProject" [
+          label = " InvalidateProject",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_Amazon-CodeBuild_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "IlkerIoStack/CodePipeline" [
+          label = " CodePipeline",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Developer- Tools/64/Arch_AWS-CodePipeline_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "IlkerIoStack/ARecord" [
+          label = " ARecord",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Resource/Res_Networking-and-Content-Delivery/Res_48_Dark/Res_Amazon-Route-53-Hosted-Zone_48_Dark_gen.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+        "IlkerIoStack/ExportsReader" [
+          label = " ExportsReader",
+          fontsize = 12,
+          image = "/Users/ilker/work/ilker.io-cdk/node_modules/cdk-dia/icons/aws/Service/Arch_Management-Governance/64/Arch_AWS-CloudFormation_64@5x.png",
+          imagescale = "true",
+          imagepos = "tc",
+          penwidth = "0",
+          shape = "node",
+          fixedsize = "true",
+          labelloc = "b",
+          width = 1.2,
+          height = 1.466,
+        ];
+      }
+    }
+  }
+  "IlkerIoStack/ilker.io-CodeCommitRepository" -> "IlkerIoStack/CodePipeline" [
+    dir = "both",
+  ];
+  "IlkerIoStack/ilker.io-WebSiteBucket" -> "IlkerIoStack/OAI" [
+    dir = "both",
+  ];
+  "IlkerIoStack/ilker.io-CFDist" -> "IlkerIoStack/ilker.io-WebSiteBucket" [
+    dir = "both",
+  ];
+  "IlkerIoStack/ilker.io-CFDist" -> "IlkerIoStack/OAI" [
+    dir = "both",
+  ];
+  "IlkerIoStack/ilker.io-CFDist" -> "IlkerIoStack/ExportsReader" [
+    dir = "both",
+  ];
+  "IlkerIoStack/CodeBuildProject" -> "IlkerIoStack/ilker.io-CodeCommitRepository" [
+    dir = "both",
+  ];
+  "IlkerIoStack/CodeBuildProject" -> "IlkerIoStack/CodePipeline" [
+    dir = "both",
+  ];
+  "IlkerIoStack/InvalidateProject" -> "IlkerIoStack/ilker.io-CFDist" [
+    dir = "both",
+  ];
+  "IlkerIoStack/InvalidateProject" -> "IlkerIoStack/CodePipeline" [
+    dir = "both",
+  ];
+  "IlkerIoStack/CodePipeline" -> "IlkerIoStack/ilker.io-CodeCommitRepository" [
+    dir = "both",
+  ];
+  "IlkerIoStack/CodePipeline" -> "IlkerIoStack/ilker.io-WebSiteBucket" [
+    dir = "both",
+  ];
+  "IlkerIoStack/CodePipeline" -> "IlkerIoStack/CodeBuildProject" [
+    dir = "both",
+  ];
+  "IlkerIoStack/CodePipeline" -> "IlkerIoStack/InvalidateProject" [
+    dir = "both",
+  ];
+  "IlkerIoStack/ARecord" -> "IlkerIoStack/ilker.io-CFDist" [
+    dir = "both",
+  ];
+}
