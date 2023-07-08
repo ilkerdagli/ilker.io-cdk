@@ -26,11 +26,11 @@ export class IlkerIoStack extends cdk.Stack {
 
     const hugoVersion = process.env.HUGO_VERSION
       ? process.env.HUGO_VERSION
-      : "0.114.1"
+      : "0.115.1"
 
     const hugoSHA256 = process.env.HUGO_SHA256
       ? process.env.HUGO_SHA256
-      : "018daab2560b4c78b47427f2075ac32b5eaf618a782a6be33693ce508150cd3c"
+      : "54dda1d6b474c09b9ea09a3ab1d6a8700e94b2a1a188a94ce7204d46feb505b7"
 
     const repo = new codecommit.Repository(
       this,
@@ -92,14 +92,13 @@ export class IlkerIoStack extends cdk.Stack {
       output: sourceOutput,
     })
 
-    // CodeBuild project to import submodules (themes) and generate static site content
     const project = new codebuild.PipelineProject(this, "CodeBuildProject", {
       buildSpec: codebuild.BuildSpec.fromObject({
         version: "0.2",
         phases: {
           install: {
             commands: [
-              "curl -Ls https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz -o /tmp/hugo.tar.gz",
+              "curl -Ls https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz -o /tmp/hugo.tar.gz",
               'echo "${HUGO_SHA256}  /tmp/hugo.tar.gz" | sha256sum -c -',
               "mkdir /tmp/hugo_${HUGO_VERSION}",
               "tar xf /tmp/hugo.tar.gz -C /tmp/hugo_${HUGO_VERSION}",
